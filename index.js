@@ -12,24 +12,36 @@ function loadLeft() {
   const li = document.createElement("li")
   li.textContent = "left"
   container.append(li)
+  li.addEventListener("click", function(event){
+    event.target.remove()
+  })
 }
 
 function loadRight() {
   const li = document.createElement("li")
   li.textContent = "right"
   container.append(li)
+  li.addEventListener("click", function(event){
+    event.target.remove()
+  })
 }
 
 function loadUp() {
   const li = document.createElement("li")
   li.textContent = "up"
   container.append(li)
+  li.addEventListener("click", function(event){
+    event.target.remove()
+  })
 }
 
 function loadDown() {
   const li = document.createElement("li")
   li.textContent = "down"
   container.append(li)
+  li.addEventListener("click", function(event){
+    event.target.remove()
+  })
 }
 
 document.addEventListener("keydown", function(e) {
