@@ -53,6 +53,25 @@ switch (e.key) {
 const button = document.querySelector("#move-button")
 
 button.addEventListener("click", function(){
-  const moves
-})
+  const moves = container.querySelectorAll("li")
+  const arrayMoves = Array.from(moves)
+
+  let i = arrayMoves.length
+
+  function myLoop() {
+    setTimeout(function() {
+      move(arrayMoves[0].innerText)
+      arrayMoves[0].remove()
+      arrayMoves.shift();
+      i--;
+      if (i > 0) {
+        myLoop();
+      }
+    }, 500)
+  }
+
+  myLoop();
+
+  }
+)
 
